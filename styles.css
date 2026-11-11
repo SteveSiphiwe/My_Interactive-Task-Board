@@ -1,5 +1,5 @@
 /* =========================================================
-   Kanban Lite — styles
+   Student Productivity Hub — styles
    Theme colours live in CSS variables so dark mode only
    needs to swap the variables (see [data-theme="dark"]).
    ========================================================= */
@@ -98,6 +98,7 @@ textarea {
 }
 
 .brand-logo {
+  flex-shrink: 0;
   display: grid;
   place-items: center;
   width: 48px;
@@ -183,15 +184,24 @@ textarea {
 }
 
 .icon-btn {
-  width: 46px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
   height: 46px;
+  padding: 0 14px;
   border-radius: 12px;
   border: 1px solid var(--border);
   background: var(--surface);
   box-shadow: var(--shadow);
   cursor: pointer;
-  font-size: 1.25rem;
+  font-size: 1.1rem;
   transition: transform 0.15s ease;
+}
+
+.theme-label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  white-space: nowrap;
 }
 
 .icon-btn:hover {
@@ -607,13 +617,18 @@ textarea:focus {
   }
 
   .header-right {
-    justify-content: space-between;
+    flex-wrap: wrap;
   }
 
   .stats {
-    flex: 1;
+    flex: 1 1 100%;
     justify-content: space-between;
     gap: 10px;
+  }
+
+  .icon-btn {
+    width: 100%;
+    justify-content: center;
   }
 
   .progress {
