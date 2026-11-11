@@ -346,6 +346,7 @@ Object.values(lists).forEach(list => {
 function applyTheme(theme) {
   document.documentElement.dataset.theme = theme;
   themeToggle.querySelector('.theme-icon').textContent = theme === 'dark' ? '☀️' : '🌙';
+  themeToggle.querySelector('.theme-label').textContent = theme === 'dark' ? 'Light mode' : 'Dark mode';
   themeToggle.setAttribute('aria-pressed', String(theme === 'dark'));
 }
 
